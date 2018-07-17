@@ -1,20 +1,9 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.master')
 
-        <title>Movies</title>
-
-    </head>
-    <body>
-        
-        <p> {{ $movie->title }} <p> 
-        <p> {{ $movie->genre }} </p>
-        <p> {{ $movie->storyline }} </p>
-        <p> {{ $movie->year }} </p>
-        <p> {{ $movie->director }} </p>
-            
-    </body>
-</html>
+@section('content')
+    <p class="list-group-item list-group-item-action list-group-item-dark"> Title: {{ $movie->title }} </p> 
+    <p class="list-group-item list-group-item-action list-group-item-dark"> Genre: {{ $movie->genre }} </p>
+    <p class="list-group-item list-group-item-action list-group-item-dark"> Storyline: {{ $movie->storyline }} </p>
+    <p class="list-group-item list-group-item-action list-group-item-dark"> Year: {{ $movie->year }} </p>
+    <p class="list-group-item list-group-item-action list-group-item-dark"> Director: {{ $movie->director }} </p>
+@endsection

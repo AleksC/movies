@@ -14,3 +14,7 @@
 Route::get('/movies', 'MovieController@index');
 
 Route::get('/movies/single-movie/{id}', 'MovieController@show');
+
+Route::get('/movies/add-movie', 'MovieController@add');
+
+Route::post('/movies', 'MovieController@store');
