@@ -15,7 +15,7 @@ class MovieController extends Controller
 
     public function show($id) 
     {
-        $movie = Movie::findOrFail($id);
+        $movie = Movie::with('comments')->findOrFail($id);
         return view('single-movie', compact('movie'));
     }
 
@@ -29,7 +29,7 @@ class MovieController extends Controller
         $this->validate(request(), 
         ['title' => 'required', 
         'genre' => 'required', 
-        'year' => 'required|after:1900|before:2018', 
+        'year' => 'required|after:1900|before:2019', 
         'storyline' => 'required|max:1000'
         ]);
 

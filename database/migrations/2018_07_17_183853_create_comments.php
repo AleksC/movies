@@ -13,10 +13,9 @@ class CreateComments extends Migration
      */
     public function up()
     {
-        Schema::create('comments', function (Blueprint $table) {
-            $table->unsignedInteger('movie_id')->references('id')->on('movies')->onDelete('cascade');
-            $table->string('content');
-            $table->timestamps();
+        Schema::table('comments', function (Blueprint $table) {
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 
