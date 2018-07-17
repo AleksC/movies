@@ -19,4 +19,4 @@ Route::get('/movies/add-movie', 'MovieController@add');
 
 Route::post('/movies', 'MovieController@store');
 
-//Route::get('/movies/single-movie/{id}', 'CommentController@store');
+Route::post('/comment/single-movie/{id}', 'CommentController@store')->name('create-comment');

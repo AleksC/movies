@@ -6,7 +6,9 @@
     <p class="list-group-item list-group-item-action list-group-item-dark"> Storyline: {{ $movie->storyline }} </p>
     <p class="list-group-item list-group-item-action list-group-item-dark"> Year: {{ $movie->year }} </p>
     <p class="list-group-item list-group-item-action list-group-item-dark"> Director: {{ $movie->director }} </p>
-
+    <p class="list-group-item list-group-item-action list-group-item-dark"> 
+        @include('add-comment')
+    </p>
     <p class="list-group-item list-group-item-action list-group-item-dark">
         Comments: 
     </p>
